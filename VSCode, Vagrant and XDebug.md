@@ -1,6 +1,6 @@
 # Debugging Laravel with Visual Studio Code and XDebug
 
-Environment: **Windows 10, Ubuntu 18.04, PHP 7.4, Vagrant**
+Environment: **Windows 10, Visual Studio Code, Ubuntu 18.04, PHP 7.4, Vagrant**
 
 1. SSH to vagrant machine
 ```
@@ -33,7 +33,7 @@ $ netstat -rn | grep "^0.0.0.0 " | cut -d " " -f10
 $ php --ini | grep 'xdebug'
 /etc/php/7.4/cli/conf.d/99-xdebug.ini
 ```
-- Above is the location of Xdebug config for CLI. Edit Xdebug config for FPM. Sometimes hoewever, both are symlinked to the same config file in /etc/php/7.4/mods-available/xdebug.ini
+- Above is the location of Xdebug config for CLI. Edit Xdebug config for FPM. Sometimes both configs are symlinked to the same file in /etc/php/7.4/mods-available/xdebug.ini
 
 5. Edit xdebug.ini
 ```
