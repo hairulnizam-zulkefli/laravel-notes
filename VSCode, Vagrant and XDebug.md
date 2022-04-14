@@ -18,8 +18,6 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 ```
 - If Xdebug is not installed, install from repo
 ```
-$ sudo apt-get install php-xdebug
-# OR
 $ sudo apt-get install php7.4-xdebug
 ```
 - Or, install from <https://xdebug.org/download>
@@ -41,7 +39,7 @@ Above is the location of Xdebug config for CLI. Edit Xdebug config for FPM.
 ```
 $ sudo nano /etc/php/7.4/fpm/conf.d/99-xdebug.ini
 # OR
-$ sudo nano /etc/php/7.4/fpm/conf.d/99-xdebug.ini
+$ sudo nano /etc/php/7.4/fpm/conf.d/20-xdebug.ini
 ```
 
 6. Contents of xdebug.ini
@@ -59,6 +57,7 @@ xdebug.remote_handler = dbgp
 xdebug.log = /tmp/xdebug.log
 xdebug.log_level = 7
 ```
+- Log level reference: <https://xdebug.org/docs/all_settings#log_level>
 
 7. Restart PHP
 ```
